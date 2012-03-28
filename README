@@ -1,0 +1,16 @@
+This is a mirror of http://www.vim.org/scripts/script.php?script_id=3992
+
+Sauce is a lightweight manager for multiple vimrc files, which can be used to load different settings for different environments. In short, you can maintain lots of different vim settings files and only load the one(s) you need when you need them.
+
+This can be used as a simple project organiser tool. For instance:
+
+" Load the MyProject sauce
+:Sauce MyProject
+
+This "sauce" (read: source) can contain anything that you would put in your vimrc, and can be used to override those settings. In this case, it could be used to CD into the project directory, set spaces instead of tabs, open NERDTree, set configuration options for PHPQA tools, etc.
+
+There's even autocomplete on the sauce names, so you don't need to remember them :)
+
+Visit the Github repository page to read more about usage: https://github.com/joonty/vim-sauce
+
+Sorry - this won't currently work on Windows, but plans are under way to change this. It's early days yet!
