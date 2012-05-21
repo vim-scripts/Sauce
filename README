@@ -13,4 +13,4 @@ There's even autocomplete on the sauce names, so you don't need to remember them
 
 Visit the Github repository page to read more about usage: https://github.com/joonty/vim-sauce
 
-Sorry - this won't currently work on Windows, but plans are under way to change this. It's early days yet!
+The autocomplete won't currently work on Windows, but plans are under way to change this.
