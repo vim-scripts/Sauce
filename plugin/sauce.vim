@@ -14,7 +14,7 @@
 " to load it automatically, or load it manually with :so sauce.vim.
 "
 " License: MIT
-"                
+"
 " }}}
 " ------------------------------------------------------------------------------
 
@@ -39,8 +39,12 @@ command! -n=1 -bar SauceNew call sauce#SauceNew('<args>',g:sauce_skel_file)
 command! -n=1 -complete=customlist,s:CompleteSauce -bar SauceEdit call sauce#SauceEdit('<args>')
 command! -n=1 -complete=customlist,s:CompleteSauce -bar SauceCopy call sauce#SauceCopy('<args>')
 command! -n=1 -complete=customlist,s:CompleteSauce -bar SauceDelete call sauce#SauceDelete('<args>')
+command! -n=1 -complete=customlist,s:CompleteSauce -bar SauceRename call sauce#SauceRename('<args>')
 
-function! s:CompleteSauce(A,L,P) 
+function! s:CompleteSauce(A,L,P)
     return filter(sauce#SauceNames(), 'v:val =~ a:A')
-endfunction 
-let g:sauce_skel_file = resolve(expand("<sfile>:h")."/../skel/vimrc.tmpl")
+endfunction
+
+if !exists("g:sauce_skel_file")
+    let g:sauce_skel_file = resolve(expand("<sfile>:h")."/../skel/vimrc.tmpl")
+endif
